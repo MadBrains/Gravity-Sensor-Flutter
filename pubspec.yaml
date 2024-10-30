@@ -7,11 +7,13 @@ issue_tracker: https://github.com/MadBrains/Gravity-Sensor-Flutter/issues
 dart_line_length: 100
 
 environment:
-  sdk: '>=3.0.0 <4.0.0'
-  flutter: '>=3.10.0'
+  sdk: '>=3.3.0 <4.0.0'
+  flutter: '>=3.19.0'
 
 dependencies:
   flutter:
+    sdk: flutter
+  flutter_web_plugins:
     sdk: flutter
   plugin_platform_interface: ^2.1.8
 
@@ -28,6 +30,9 @@ flutter:
         pluginClass: GravitySensorPlugin
       ios:
         pluginClass: GravitySensorPlugin
+      web:
+        pluginClass: GravitySensorWeb
+        fileName: src/web/gravity_sensor_web.dart
 
 topics:
  - flutter
